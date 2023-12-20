@@ -22,7 +22,5 @@ public interface GoodsService {
 
 	int keywordcount(String keyword);
 
-	int searchKeyword(String keyword);
-
 	
 }

@@ -94,8 +94,7 @@
 
 </head>
 <body>
-	<h1>새로운 상품</h1>
-		<h2></h2>
+
 	<section id="new_book">
 		<h3>새로나온 책</h3>
 		<div id="left_scroll">
@@ -115,7 +114,7 @@
 					<c:otherwise>
 						<c:forEach var="item" items="${list}">
 							<c:if test="${item.goods_status eq 'newgoods'}">
-								<li>
+								<li>새로운 상품
 									<div id="book">
 										<a
 											href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id}">
@@ -205,7 +204,7 @@
 %>
 <!-- 			<li><a class="no_border" href="#">Prev</a></li> -->
 			<c:set var="page_num" value="0" />
-			<c:forEach var="count" begin="1" end="${roundedPageCount}" step="1">
+			<c:forEach var="count" begin="1" end="${(keywordcount+9) /10 }" step="1">
 				<c:choose>
 					<c:when test="${count==1 }">
 						<li><a class="page_contrl_active" href="#">${count+page_num*10 }</a></li>

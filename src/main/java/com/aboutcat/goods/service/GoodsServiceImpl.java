@@ -64,13 +64,6 @@ public class GoodsServiceImpl implements GoodsService {
 
 		return list;
 	}
-	
-	@Override
-	public int searchKeyword(String keyword) {
-		int searchkeyword=goodsDAO.searchKeyword(keyword);
-		return searchkeyword;
-	}
-	
 
 	@Override
 	public int keywordcount(String keyword) {
