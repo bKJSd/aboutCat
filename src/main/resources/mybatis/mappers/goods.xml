@@ -115,4 +115,15 @@
 	</select>
 
 
+	<select id="searchKeyword" resultType="int">
+	    <![CDATA[
+    	select COUNT(*)
+    	from cat_goods_tbl
+    	where
+    	goods_name like '%'||#{keyword}||'%'
+    	]]>
+	</select>
+
+
+
 </mapper>

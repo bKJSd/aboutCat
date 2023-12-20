@@ -64,7 +64,7 @@
 						</s></span><br>
 					<span> <fmt:formatNumber
 								value="${item.goods_sell_price}" type="number"
-								var="discounted_price" /> ${discounted_price}원 <br> <c:set
+								var="discounted_price" /> <strong>${discounted_price}원 </strong><br> <c:set
 								var="discount_rate"
 								value="${100 - (item.goods_sell_price / item.goods_price) * 100 }" />
 							<c:set var="formatted_discount_rate" value="${discount_rate}" />
@@ -109,7 +109,7 @@
 						</s></span><br>
 					<span> <fmt:formatNumber
 								value="${item.goods_sell_price}" type="number"
-								var="discounted_price" /> ${discounted_price}원 <br> <c:set
+								var="discounted_price" /><strong> ${discounted_price}원</strong> <br> <c:set
 								var="discount_rate"
 								value="${100 - (item.goods_sell_price / item.goods_price) * 100 }" />
 							<c:set var="formatted_discount_rate" value="${discount_rate}" />
@@ -153,7 +153,7 @@
 						</s></span><br>
 					<span> <fmt:formatNumber
 								value="${item.goods_sell_price}" type="number"
-								var="discounted_price" /> ${discounted_price}원 <br> <c:set
+								var="discounted_price" /> <strong>${discounted_price}원 </strong><br> <c:set
 								var="discount_rate"
 								value="${100 - (item.goods_sell_price / item.goods_price) * 100 }" />
 							<c:set var="formatted_discount_rate" value="${discount_rate}" />

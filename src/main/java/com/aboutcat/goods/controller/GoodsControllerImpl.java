@@ -45,7 +45,8 @@ public class GoodsControllerImpl implements GoodsController {
 		String viewName = (String) request.getAttribute("viewName");
 		List<GoodsVO> goodsList = goodsService.searchGoods(searchWord);
 		ModelAndView mav = new ModelAndView(viewName);
-
+		int searchkeyword = goodsService.searchKeyword(searchWord);
+		mav.addObject("searchkeyword",searchkeyword);
 		mav.addObject("goodsList", goodsList);
 		return mav;
 
@@ -81,7 +82,6 @@ public class GoodsControllerImpl implements GoodsController {
 		jsonObject.put("keyword", keywordList);
 
 		String jsonInfo = jsonObject.toString();
-
 		return jsonInfo;
 	}
 
