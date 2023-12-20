@@ -94,7 +94,8 @@
 
 </head>
 <body>
-
+	<h1>새로운 상품</h1>
+		<h2></h2>
 	<section id="new_book">
 		<h3>새로나온 책</h3>
 		<div id="left_scroll">
@@ -114,7 +115,7 @@
 					<c:otherwise>
 						<c:forEach var="item" items="${list}">
 							<c:if test="${item.goods_status eq 'newgoods'}">
-								<li>새로운 상품
+								<li>
 									<div id="book">
 										<a
 											href="${contextPath}/goods/goodsDetail.do?goods_id=${item.goods_id}">

@@ -15,8 +15,8 @@
 </head>
 <body>
 	<hgroup>
-		<h1>뭐쓰지</h1>
-		<h2>오늘의 상품</h2>
+		<h1>오늘의 상품</h1>
+		<h2></h2>
 	</hgroup>
 	<section id="new_book">
 		<h3>신상품</h3>
@@ -57,9 +57,13 @@
 										<span> <fmt:formatNumber value="${item.goods_price}"
 												type="number" var="goods_price" /> ${goods_price}원
 										</span> <br>
-										<fmt:formatNumber value="${item.goods_price*0.9}"
-											type="number" var="discounted_price" />
-										${discounted_price}원(10%할인)
+										<fmt:formatNumber 
+									value="${item.goods_sell_price}" type="number"
+								var="discounted_price" /> ${discounted_price}원
+					</strong><br> <c:set var="discount_rate"
+							value="${100 - (item.goods_sell_price / item.goods_price) * 100 }" />
+						<c:set var="formatted_discount_rate" value="${discount_rate}" />
+						(${formatted_discount_rate.intValue()}%할인)</td>
 									</div>
 								</div>
 							</li>
@@ -107,9 +111,12 @@
 					</td>
 					<td class="price"><span>${item.goods_price }원</span><br>
 						<strong> <fmt:formatNumber
-								value="${item.goods_price*0.9}" type="number"
+								value="${item.goods_sell_price}" type="number"
 								var="discounted_price" /> ${discounted_price}원
-					</strong><br>(10% 할인)</td>
+					</strong><br> <c:set var="discount_rate"
+							value="${100 - (item.goods_sell_price / item.goods_price) * 100 }" />
+						<c:set var="formatted_discount_rate" value="${discount_rate}" />
+						(${formatted_discount_rate.intValue()}%할인)</td>
 					<td><input type="checkbox" value=""></td>
 					<td class="buy_btns">
 						<UL>

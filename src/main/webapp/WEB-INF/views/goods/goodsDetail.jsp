@@ -134,7 +134,7 @@
 
 					<td class="active2"><span> <fmt:formatNumber
 								value="${goods.goods_sell_price}" type="number"
-								var="discounted_price" /> ${discounted_price}원 <br> <c:set
+								var="discounted_price" /><strong> ${discounted_price}원 <br></strong> <c:set
 								var="discount_rate"
 								value="${100 - (goods.goods_sell_price / goods.goods_price) * 100 }" />
 							<c:set var="formatted_discount_rate" value="${discount_rate}" />
